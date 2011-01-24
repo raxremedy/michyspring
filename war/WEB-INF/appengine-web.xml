@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<appengine-web-app xmlns="http://appengine.google.com/ns/1.0">
+    <application>michyspring</application>
+    <version>1</version>
+    
+    <sessions-enabled>true</sessions-enabled>
+
+    <static-files>
+        <include path="**" expiration="14d" />
+        <exclude path="/META-INF/**" />
+    </static-files>
+
+    <resource-files>
+        <exclude path="/img/**" />
+        <exclude path="/css/**" />
+        <exclude path="/js/**" />
+        <exclude path="/favicon.ico" />
+    </resource-files>
+
+    <system-properties>
+        <property name="java.util.logging.config.file" value="WEB-INF/logging.properties" />
+    </system-properties>
+    
+</appengine-web-app>
